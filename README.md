@@ -100,7 +100,7 @@ pip install -r requirements.txt
 
 ### 2. 运行主控制端
 ```bash
-cd widget_code
+cd widdget_code
 python Shining.py
 ```
 
