@@ -1,0 +1,29 @@
+# 核心科学计算与图像处理
+numpy>=1.21.0,<1.24.0
+scipy>=1.7.0
+opencv-python>=4.5.0
+matplotlib>=3.5.0
+
+# GUI 框架与主题
+PySide6>=6.4.0
+qt-material>=2.14
+
+# 深度学习 (YOLOv8)
+ultralytics>=8.0.0
+torch>=1.12.0,<2.0.0
+torchvision>=0.13.0
+
+# 数值微分 (用于 EKF 雅可比)
+numdifftools>=0.9.40
+
+# 3D 可视化
+pyqtgraph>=0.13.0
+PyOpenGL>=3.1.6
+
+# Windows 特定操作 (截图等)
+pywin32>=305
+
+# 其他工具
+git clone https://github.com/Microsoft/AirSim.git
+cd AirSim/PythonClient
+pip install -e .
