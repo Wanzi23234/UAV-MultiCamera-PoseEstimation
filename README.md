@@ -147,7 +147,7 @@ python Shining.py
 如果您发现本项目对您的研究有帮助，请引用以下工作：
 ```
 @misc{wang2026uavpose,
-  author = {王涵智},
+  author = {丸子🍡},
   title = {基于多相机纯视觉与紧耦合EKF的室内无人机位姿估计系统},
   year = {2026},
   publisher = {GitHub},
