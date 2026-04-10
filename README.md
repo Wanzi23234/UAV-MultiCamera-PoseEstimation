@@ -57,6 +57,7 @@
 ```bash
 pip install -r requirements.txt
 ```
+（🤣装炸了别怪我，这个AI生成的，真要跑建议对着main_log.py配一下，基本都是常用包）
 
 主要依赖包：
 - `PySide6`：图形界面框架
