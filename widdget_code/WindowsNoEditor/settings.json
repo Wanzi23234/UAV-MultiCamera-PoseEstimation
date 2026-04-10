@@ -1,0 +1,10 @@
+{
+  "SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/main/docs/settings.md",
+  "SettingsVersion": 1.2,
+  "SimMode": "Multirotor",
+  "PawnPaths": {
+    "DefaultQuadrotor": {
+      "PawnBP": "Class'/Game/StarterContent/Blueprints/UI_way/BP_FlyingPawn.BP_FlyingPawn_C'"
+    }
+  }
+}
