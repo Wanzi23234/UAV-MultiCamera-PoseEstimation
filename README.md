@@ -94,13 +94,13 @@ pip install -r requirements.txt
 ## 🚀 运行指南
 
 ### 1. 启动 UE4 仿真环境
-- 双击 `WindowsNoEditor/try2.exe` 启动 UE4 项目。
+- 双击 `WindowsNoEditor/try2.exe` 启动 UE4 项目，或者直接从代码控制端打开
 - 确认 AirSim 已正确加载，无人机模型出现在场景中。
 
 ### 2. 运行主控制端
 ```bash
-cd control_code
-python main.py
+cd widget_code
+python Shining.py
 ```
 
 ### 3. 操作流程
