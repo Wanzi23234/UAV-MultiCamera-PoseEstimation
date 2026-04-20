@@ -32,11 +32,11 @@
 ├── control_code/                 # 核心控制与算法代码
 │   ├── YOLO_try/                 # YOLOv8 训练相关脚本与权重
 │   ├── collect.py                #飞行控制辅助代码（没啥用，不用看）
-│   ├── split.py                  #数据集制造辅助代码
+│   ├── split.py                  #数据集制造辅助代码（（没啥用，不用看））
 ├── test/                         # 单元测试与调试脚本
 ├── widdget_code/                 # 自定义 PyQt 控件与可视化组件
 │   ├── Shining.py                # 主程序入口（仿真控制端）
-│   ├── 3D_2D.py                  # 数据集制造辅助代码（运行完这个运行split.py）
+│   ├── 3D_2D.py                  # 数据集制造辅助代码（运行完这个运行makedataset.py，在YOLO_try里头）
 │   ├── main_log.py               # 主函数（仿真控制端）
 │   ├── start_window.py           # 启动界面（非主要）
 │   ├── global_import.py          # 全局变量与参数定义（含相机内参、EKF调参等）
