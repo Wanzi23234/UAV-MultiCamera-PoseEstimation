@@ -31,7 +31,7 @@ rotor_position_EKF = np.array([
 pt_name = 'best.pt'
 
 # EKF调参变量
-R_diag_global = 800
+R_diag_global = 10
 q_alpha_global = 0.2
 q_a_global = 500
 P_init_global = None
