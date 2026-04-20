@@ -1,7 +1,7 @@
 
 ---
 
-# 基于多相机纯视觉与紧耦合EKF的室内无人机位姿估计系统
+# 基于多相机纯视觉与多算法结算的室内无人机位姿估计系统
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
@@ -31,19 +31,19 @@
 .
 ├── control_code/                 # 核心控制与算法代码
 │   ├── YOLO_try/                 # YOLOv8 训练相关脚本与权重
-│   ├── main.py                   # 主程序入口（仿真控制端）
-│   ├── start_window.py           # 启动界面与参数配置
-│   ├── global_import.py          # 全局变量与参数定义（含相机内参、EKF调参等）
-│   ├── RigidBodyEKF.py           # 松耦合 EKF 实现
-│   ├── TightlyCoupledEKF.py      # 紧耦合 EKF 实现
-│   └── LS_solver.py              # 最小二乘几何解算
+│   ├── collect.py                #飞行控制辅助代码（没啥用，不用看）
+│   ├── split.py                  #数据集制造辅助代码（没啥用，不用看）
 ├── test/                         # 单元测试与调试脚本
 ├── widdget_code/                 # 自定义 PyQt 控件与可视化组件
-├── recorder/                     # 自动生成的飞行记录数据（JSON）
-├── WindowsNoEditor/try2/connect/ # UE4 通信目录（触发文件）
+│   ├── Shining.py                # 主程序入口（仿真控制端）
+│   ├── main_log.py               # 主函数（仿真控制端）
+│   ├── start_window.py           # 启动界面（非主要）
+│   ├── global_import.py          # 全局变量与参数定义（含相机内参、EKF调参等）
+│   ├── recorder/                 # 自动生成的飞行记录数据（JSON）
+│   ├── WindowsNoEditor/try2/connect/ # UE4 通信目录（触发文件）
 └── requirements.txt              # Python 依赖列表
 ```
-(上面AI生成的嗷，我结构好像不是这样的，你看着具体下载就是了，反正能跑😁)
+(你看着具体下载就是了，反正能跑😁)
 
 ## 🛠️ 环境配置
 
@@ -106,7 +106,7 @@ python Shining.py
 
 ### 3. 操作流程
 1. **连接 AirSim**：点击界面“开启仿真数据收集端口”按钮，建立与 UE4 的通信。
-2. **选择算法模式**：😅不给你选，三个算法一起跑，本关考验你电脑性能。
+2. **选择算法模式**：😅不给你选，三个算法一起跑，本关考验你电脑性能。（是做优化了的，如果带不动记得限制一下图传）
 3. **轨迹设置**：选择预设轨迹（圆形、方形、8字）或启用“随机飞行”。
 4. **干扰配置**：可勾选“落叶干扰”、“相机屏蔽”等选项进行鲁棒性测试。
 5. **开始实验**：点击“开始”按钮，无人机将按设定飞行，右侧面板实时显示位姿估计结果与重投影误差。
@@ -120,7 +120,7 @@ python Shining.py
 ## 🧪 核心算法说明
 
 ### 紧耦合扩展卡尔曼滤波 (Tightly-Coupled EKF)
-本项目的核心创新点。传统松耦合 EKF 将三维重建作为中间观测，易引入“二次损耗”导致精度下降甚至发散。紧耦合 EKF 直接将**二维像素坐标**作为观测输入，通过实时计算投影雅可比矩阵，在像素残差层面对状态量进行修正。
+本项目的核心创新点。传统松耦合 EKF 将三维重建作为中间观测，易引入“二次损耗”导致精度下降甚至发散。紧耦合 EKF 直接将**二维像素坐标**作为观测输入，通过实时计算投影雅可比矩阵，在像素残差层面对状态量进行修正。（没那么玄乎，其实调对了参数在低频图传下各方面都是松耦合占优）
 
 **状态向量** (13维)：
 ```
