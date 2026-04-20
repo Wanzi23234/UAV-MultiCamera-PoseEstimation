@@ -71,7 +71,7 @@ pip install -r requirements.txt
 - `numdifftools`：数值雅可比计算（紧耦合 EKF 依赖）
 
 ### 3. YOLO 模型权重
-将训练好的 YOLOv8-pose 权重文件 `best.pt` 放置于 `control_code/` 目录下，或在 `global_import.py` 中修改 `pt_name` 变量指向正确路径。
+将训练好的 YOLOv8-pose 权重文件 `best.pt` 放置于 `control_code/` 目录下，或在 `global_import.py` 中修改 `pt_name` 变量指向正确路径。(这里我是支持热插拔的，你在软件内也是可以直接提交训练pt文件的)
 
 ### 4. UE4 仿真项目
 请确保 UE4 项目已正确配置 AirSim，并将项目文件夹命名为 `WindowsNoEditor` 置于项目根目录（或修改 `global_import.py` 中的相关路径）。
