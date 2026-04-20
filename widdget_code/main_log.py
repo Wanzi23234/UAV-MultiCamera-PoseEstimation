@@ -2917,7 +2917,7 @@ class Stats():#😁👍嗨嗨嗨，主窗口构建与几乎所有的功能
         self.label_7.setText(QCoreApplication.translate("widget", u"\u65e0\u4eba\u673a\u98de\u884c\u9ad8\u5ea6\u8303\u56f4\uff1a", None))
         self.label_10.setText(QCoreApplication.translate("widget", u"m", None))
         self.label_11.setText(QCoreApplication.translate("widget", u"\u76f8\u673a\u8ddd\u79bb\u4e16\u754c\u539f\u70b9\u4f4d\u7f6e\uff1a", None))
-        self.label_12.setText(QCoreApplication.translate("widget", u"m", None))
+        self.label_12.setText(QCoreApplication.translate("widget", u"cm", None))
         self.label_14.setText(QCoreApplication.translate("widget", u"\u6444\u50cf\u673a\u4fef\u4ef0\u89d2", None))
         self.label_15.setText(QCoreApplication.translate("widget", u"\u5ea6", None))
         self.label_16.setText(QCoreApplication.translate("widget", u"\u62cd\u7167\u95f4\u9694", None))
