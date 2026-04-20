@@ -1,0 +1,15 @@
+#来给个总路径名
+path: bbby
+train: train\images
+val: val\images
+
+kpt_shape: [5, 3]
+skeleton:
+  - [0, 1]  # 连接关键点0和关键点1
+  - [0, 2]  # 连接关键点0和关键点1
+  - [0, 3]  # 连接关键点0和关键点1
+  - [0, 4]  # 连接关键点0和关键点1
+
+#类型名
+nc: 1
+names: ['UAV']
