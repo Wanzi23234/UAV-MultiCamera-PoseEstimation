@@ -32,10 +32,11 @@
 ├── control_code/                 # 核心控制与算法代码
 │   ├── YOLO_try/                 # YOLOv8 训练相关脚本与权重
 │   ├── collect.py                #飞行控制辅助代码（没啥用，不用看）
-│   ├── split.py                  #数据集制造辅助代码（没啥用，不用看）
+│   ├── split.py                  #数据集制造辅助代码
 ├── test/                         # 单元测试与调试脚本
 ├── widdget_code/                 # 自定义 PyQt 控件与可视化组件
 │   ├── Shining.py                # 主程序入口（仿真控制端）
+│   ├── Shining.py                # 数据集制造辅助代码（运行完这个运行split.py）
 │   ├── main_log.py               # 主函数（仿真控制端）
 │   ├── start_window.py           # 启动界面（非主要）
 │   ├── global_import.py          # 全局变量与参数定义（含相机内参、EKF调参等）
@@ -86,7 +87,7 @@ pip install -r requirements.txt
 | `l` | 相机分布球面半径（cm） | 1600 |
 | `angle` | 相机俯仰角（度） | 45 |
 | `picture_split` | 8路拼接图切割坐标 | 预设值 |
-| `R_diag_global` | 松耦合 EKF 观测噪声方差 | 800 |
+| `R_diag_global` | 松耦合 EKF 观测噪声方差 | 10 |
 | `r_pixel` | 紧耦合 EKF 像素观测标准差 | 0.5 |
 | `q_a_global` | 线加速度过程噪声谱密度 | 500 |
 | `q_alpha_global` | 角加速度过程噪声谱密度 | 0.2 |
