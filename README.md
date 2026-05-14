@@ -29,7 +29,7 @@
 
 ![wbbb](test/WBBB.gif)
 - 位姿解算界面
-![www](test/WWW.gif)
+![www](test/www.gif)
 
 ## 📂 项目结构
 
