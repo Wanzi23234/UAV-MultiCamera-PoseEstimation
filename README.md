@@ -73,7 +73,7 @@ pip install -r requirements.txt
 - `numpy`, `scipy`, `matplotlib`：科学计算与绘图
 - `pyqtgraph`：3D 实时渲染
 - `opencv-python`：图像处理
-- `numdifftools`：数值雅可比计算（紧耦合 EKF 依赖）
+- `numdifftools`：数值雅可比计算
 
 ### 3. YOLO 模型权重
 将训练好的 YOLOv8-pose 权重文件 `best.pt` 放置于 `control_code/` 目录下，或在 `global_import.py` 中修改 `pt_name` 变量指向正确路径。（本项目支持热插拔，亦可在软件界面中直接提交训练好的 pt 文件）。
